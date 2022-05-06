@@ -47,6 +47,7 @@ namespace eTickets
 
             //Authentication and authorization
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddMemoryCache();
             services.AddSession();
             services.AddAuthentication(options => 
